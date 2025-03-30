@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: xueweishengpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xueweishengpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: xueweishengpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: xueweishengpipelinesjavascriptdocker 
+          image: mycontainerregistrypro069.azurecr.io/xueweishengpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
